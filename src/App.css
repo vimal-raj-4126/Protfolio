@@ -69,3 +69,58 @@ body{
                     <h2>Hire Me</h2>
                   </div>
                 </div> */
+.glow-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-button-card {
+  position: relative;
+  background: var(--text-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+  display: inline-block;
+}
+
+.glow-button-card h2 {
+  font-size: 1rem;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  color: var(--bg-color);
+  text-align: center;
+}
+
+.glow-button-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    var(--bg-color)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+}
+
+.glow-button-card:hover {
+  transform: scale(1.05);
+}
+
+.glow-button-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}

@@ -62,16 +62,26 @@ const About = () => {
           ))}
         </div>
 
-        <div style={{display:"flex" , flexWrap:"wrap" ,justifyContent:"center"}}>
-            <a href={about.resume} download className="resume-btn me-2">
-          Download Resume
-        </a>
-        <a href={about.resume} download className="resume-btn">
-          Learn More
-        </a>
-        </div>
-      </div>
+       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
+  <div className="glow-button-container">
+    <a href={about.resume} download className="glow-button-card">
+      <h2>Download Resume</h2>
+    </a>
+  </div>
 
+  <div className="glow-button-container">
+    <a href={about.resume} download className="glow-button-card">
+      <h2>Learn More</h2>
+    </a>
+  </div>
+</div>
+
+        
+      </div>
+      
+ {/* <a href={about.resume} download className="resume-btn">
+          Learn More
+        </a> */}
       {/* Right Side */}
       <div className="about-side about-right">
         {about.rightCards.map((card, i) => (
@@ -81,6 +91,7 @@ const About = () => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };
