@@ -1,0 +1,70 @@
+/* === Theme Variables === */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1e1e2f;
+  --sidebar-bg: rgba(255, 255, 255, 0.95);
+  --color-details: #007acc;
+  --menu-toggle-bg: #12131a;
+  --bird: 0xffffff;
+  --pro-bg:rgb(187, 187, 187);
+  --third:rgb(94, 94, 251);
+}
+
+body[data-theme='dark'] {
+  --bg-color: #1e1e2f;
+  --text-color: #ffffff;
+  --sidebar-bg: rgba(10, 10, 15, 0.95);
+  --color-details: #00d9ff;
+  --menu-toggle-bg: #12131a;
+  --bird: 0xf;
+  --pro-bg:rgb(19, 19, 19);
+  --third:red;
+}
+
+
+.theme-toggle-neumorphic {
+  position: relative;
+  width: 60px;
+  height: 35px;
+}
+
+.theme-toggle-neumorphic input {
+  display: none;
+}
+
+.switch-neumorphic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e0e0;
+  border-radius: 999px;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 4px 4px 6px #cfcfcf, inset -4px -4px 6px #ffffff;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ffa500, #ff8c00); /* Light theme (sun) default */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode */
+.theme-toggle-neumorphic input:checked + .switch-neumorphic .slider {
+  left: 30px;
+  background: linear-gradient(to bottom, #5a8dee, #3b5fed);
+}

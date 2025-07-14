@@ -1,0 +1,71 @@
+body{
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Button toggle */
+.holographic-container {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  /* height: 100vh; */
+  /* background: #000; */
+}
+
+.holographic-card {
+  background: var(--text-color);
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* position: relative; */
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.holographic-card h2 {
+  color: var(--bg-color);
+  font-size: 1.2rem;
+  position: relative;
+  padding-top: 7px;
+  padding-bottom: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  z-index: 2;
+  cursor: pointer;
+  
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    var(--bg-color)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 0 20px rgba(0,255,255,0.5); */
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+ /* <div class="holographic-container">
+                  <div class="holographic-card">
+                    <h2>Hire Me</h2>
+                  </div>
+                </div> */
