@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../css/component/NavSection.css";
+import "../../Freelance&Developer/css/component/NavSection.css";
 import ThemeToggle from "../../Common/component/ThemeToggle";
 
 const NavSection = () => {

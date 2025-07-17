@@ -1,0 +1,68 @@
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* No spacing between entire section and page */
+.gallery-section > .slick-slider {
+  margin: 0;
+  padding: 0;
+}
+
+/* No gap inside each slide */
+.slick-slide {
+  margin: 0;
+  padding: 0;
+}
+.slick-list {
+  margin: 0;
+  margin-top: -6px !important;
+  padding: 0;
+}
+
+/* Gallery Box */
+.gallery-box {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+/* Image full stretch */
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover text */
+.gallery-box::after {
+  content: "View Portfolio";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.gallery-box:hover::after {
+  opacity: 1;
+}
+
+/* Mobile height adjust */
+@media (max-width: 768px) {
+  .gallery-box {
+    height: 180px;
+  }
+}

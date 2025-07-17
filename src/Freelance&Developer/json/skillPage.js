@@ -71,7 +71,28 @@ const skillPage = [
         name:'Java script',
         percentage:80,
         rangecolor:'yellow'
-    }
+    },
+    {
+        id:10,
+        pic:img1,
+        name:'html',
+        percentage:100,
+        rangecolor:'red'
+    },
+     {
+        id:11,
+        pic:img2,
+        name:'css',
+        percentage:80,
+        rangecolor:'blue'
+    },
+    {
+        id:12,
+        pic:img3,
+        name:'Python',
+        percentage:80,
+        rangecolor:'yellow'
+    },
 ]
 
 export default skillPage;

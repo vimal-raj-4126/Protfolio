@@ -74,6 +74,7 @@
   align-items: center;
   gap: 6px;
   position: relative;
+  
 }
 
 .menu-toggle span {
@@ -172,11 +173,25 @@
 .nav-section {
   width: 100%;
   padding: 1rem 2rem;
-  transition: background-color 1s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(0);
 }
 
+/* Initial state */
 .nav-section.scrolled {
-  background-color: transparent; /* or any color */
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
 }
+
+/* Optional Slide In on Scroll */
+.nav-section.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+

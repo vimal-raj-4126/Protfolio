@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import "../css/component/Skills.css";
+import "../../Freelance&Developer/css/component/Skills.css";
 import { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { MyContext } from "../context/MyContext";
@@ -30,8 +30,8 @@ const Skills = () => {
 
   return (
     <Container>
-        <h1 className="mt-3"style={{color:"var(--text-color)"}}>My Skills</h1>
-    {/* <h3 style={{color:'var(--text-color)'}}>A Showcase of My Technical Strengths</h3> */}
+        <h1 className="mt-5"style={{color:"var(--text-color)",textAlign:"center"}}>My Skills</h1>
+    <h3 style={{color:'var(--text-color)',textAlign:"center"}}>A Showcase of My Technical Strengths</h3>
 
       <div className="skills-container" ref={ref}>
         {Myskilldata.map((skill, i) => (

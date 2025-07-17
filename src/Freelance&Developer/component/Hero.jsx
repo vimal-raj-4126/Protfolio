@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../css/component/Hero.css";
+import "../../Freelance&Developer/css/component/Hero.css";
 import persion from "../assets/persion.png";
 import { MyContext } from "../context/MyContext";
 import NavSection from "./NavSection";

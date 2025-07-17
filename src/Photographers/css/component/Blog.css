@@ -1,0 +1,119 @@
+.blog {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: var(--text-color);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.blog-slider {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: var(--pro-bg);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px; /* Equal height */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.blog-title {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.blog-desc {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.blog-link {
+  color: var(--third);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+.blog-slider .slick-slide {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Arrows */
+.blog-slider .slick-prev,
+.blog-slider .slick-next {
+  background: var(--third);
+  color: #fff;
+  z-index: 1;
+  width: 30px;
+  height: 40px;
+  padding-top: 3px;
+  /* border-radius: 50%; */
+}
+
+.blog-slider .slick-prev:before,
+.blog-slider .slick-next:before {
+  font-size: 20px;
+  color: black;
+}
+
+.blog-slider .slick-prev {
+  left: -45px;
+  display: none !important;
+}
+
+.blog-slider .slick-next {
+  right: -45px;
+  display: none !important;
+}
+
+/* Hide arrows on mobile */
+@media screen and (max-width: 768px) {
+  .blog-slider .slick-prev,
+  .blog-slider .slick-next {
+    display: none !important;
+  }
+}
+
+/* Dots customization */
+.blog-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.blog-slider .slick-dots li.slick-active button:before {
+  color: #ff6600;
+}
