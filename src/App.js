@@ -1,11 +1,13 @@
 import './App.css';
 import Photographers from './Photographers/routes/Photographers';
-import FreelanceAndDeveloper from './Freelance&Developer/routes/FreelanceAndDeveloper';
+import FreelanceAndDeveloper from './FreelanceAndDeveloper/routes/FreelanceAndDeveloper';
+import FresherAndStudent from './FresherAndStudent/routes/FresherAndStudent';
 function App() {
   return (
     <div className="App">
-      <FreelanceAndDeveloper />
+      {/* <FreelanceAndDeveloper /> */}
       {/* <Photographers /> */}
+      <FresherAndStudent />
     </div>
   );
 }

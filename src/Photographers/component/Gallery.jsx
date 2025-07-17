@@ -28,6 +28,21 @@ const Gallery = () => {
             { breakpoint: 768, settings: { slidesToShow: 2 } }
         ]
     };
+    const settings1 = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2490,
+        arrows: false,
+        pauseOnHover: false,
+        responsive: [
+            { breakpoint: 1024, settings: { slidesToShow: 2 } },
+            { breakpoint: 768, settings: { slidesToShow: 2 } }
+        ]
+    };
 
     return (
         
@@ -41,7 +56,7 @@ const Gallery = () => {
                 ))}
             </Slider>
 
-            <Slider {...settings}>
+            <Slider {...settings1}>
                 {getLineImages("two").map((img, idx) => (
                     <div key={idx} className="gallery-box" onClick={() => navigate("/portfolio")}><img src={img} alt="line2" /></div>
                 ))}

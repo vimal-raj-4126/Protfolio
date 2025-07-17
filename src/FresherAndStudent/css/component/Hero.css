@@ -1,0 +1,128 @@
+.hero-wrapper1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+  z-index: 1;
+  color: white;
+}
+
+/* LEFT ICON BOX */
+.hero-left1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  background: #a3c858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+  border: 3px solid #e6e6e6;
+}
+
+.left-icon {
+  font-size: 35px;
+  color: white;
+}
+
+.hire-btn {
+  width: 100px;
+  height: 50px;
+  background: #c0392b;
+  color: white;
+  border: 3px solid #e6e6e6;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* CENTER SECTION */
+.hero-center1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-background-name {
+  position: absolute;
+  font-size: 180px;
+  color: var(--text-color);
+  font-weight: bold;
+  /* user-select: none; */
+  pointer-events: none;
+}
+
+.hero-pic1 {
+  width: 330px;
+  object-fit: contain;
+  z-index: 1;
+  /* box-shadow: 0 0 30px rgba(0,0,0,0.5); */
+  border-radius: 0;
+  border: none;
+}
+
+/* RIGHT SECTION */
+.hero-right1 {
+  text-align: right;
+}
+
+.hero-name1 {
+  font-size: 3rem;
+}
+
+.hero-mini1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 18px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .hero-container1 {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .hero-left1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-background-name {
+    font-size: 80px;
+  }
+
+  .hero-right1 {
+    text-align: center;
+  }
+
+  .hero-pic1 {
+    width: 220px;
+  }
+}

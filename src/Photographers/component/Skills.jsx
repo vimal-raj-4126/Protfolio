@@ -33,18 +33,18 @@ const Skills = () => {
 
   return (
     <Container className="my-4">
-      <div className="skills-main-container" ref={ref}>
+      <div className="skills-main-container1" ref={ref}>
         {/* Left Text */}
-        <div className="skills-left-content">
+        <div className="skills-left-content1">
           <h1 className="text-center">{aboutData?.text}</h1>
           <p>{aboutData?.description}</p>
         </div>
 
         {/* Right Skills */}
-        <div className="skills-right-container">
+        <div className="skills-right-container1">
           {Myskilldata.filter(skill => skill.pic).map((skill, i) => (
-            <div className="skill-card" key={skill.id}>
-              <div className="skill-circle">
+            <div className="skill-card1" key={skill.id}>
+              <div className="skill-circle1">
                 <Wave
                   fill={skill.rangecolor}
                   paused={false}
@@ -62,10 +62,10 @@ const Skills = () => {
                     transition: 'height 0.5s ease'
                   }}
                 />
-                <div className="skill-icon">{skill.pic}</div>
-                <div className="skill-percent">{animatedPercentages[i]}%</div>
+                <div className="skill-icon1">{skill.pic}</div>
+                <div className="skill-percent1">{animatedPercentages[i]}%</div>
               </div>
-              <div className="skill-name">{skill.name}</div>
+              <div className="skill-name1">{skill.name}</div>
             </div>
           ))}
         </div>
