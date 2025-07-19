@@ -10,6 +10,7 @@
   --third:rgb(94, 94, 251);
   --photo-color:blue;
   --photo-color-h:rgb(0, 0, 112);
+  --std-color:black;
 }
 
 body[data-theme='dark'] {
@@ -23,6 +24,7 @@ body[data-theme='dark'] {
   --third:red;
   --photo-color:#ff6600;
   --photo-color-h:#8e3900;
+  --std-color:rgb(0, 74, 0);
 }
 
 
