@@ -1,0 +1,87 @@
+.awards-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.awards-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.awards-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: none; /* No card background */
+  border-radius: 12px;
+  padding: 10px 15px;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.award-item:hover {
+  transform: scale(1.02);
+}
+
+.award-img-left {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.award-info {
+  text-align: left;
+}
+
+.award-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-color);
+}
+
+.award-rank {
+  font-size: 1.2rem;
+  color: var(--color-details);
+  font-weight: 500;
+}
+
+.award-year {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .award-item {
+    flex-direction: row;         /* ✅ keep row on mobile too */
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;            /* ✅ align text left */
+  }
+
+  .award-img-left {
+    width: 100px;
+    height: 150px;
+  }
+
+  .award-info {
+    width: 230px;
+    text-align: left;            /* ✅ keep text aligned left */
+  }
+}

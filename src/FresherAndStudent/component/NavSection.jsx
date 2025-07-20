@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../FresherAndStudent/css/component/NavSection.css";
 import ThemeToggle from "../../Common/component/ThemeToggle";
+// import pic from 'logo.png'
 
 const NavSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +26,16 @@ const NavSection = () => {
     <>
       <div className={`nav-section ${scrolled ? "scrolled" : ""} main-navbar`}>
         <div className="logo">
-          <span>Portfolio</span>
+          {/* <span>Portfolio</span> */}
+          <img src="/image/logo.png" alt="" width={"28px"}/>
+          <span style={{position:"relative",left:"-7px",top:"3px"}}>iAML .</span>
         </div>
 
         <div className="nav-right ">
           <div className="nav-links desktop-only">
-            <a href="/about">About</a>
-            <a href="/projects">Projects</a>
-            <a href="/experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
           </div>
           <div className="theme_toggle ms-2">
             <ThemeToggle />
@@ -54,13 +57,13 @@ const NavSection = () => {
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "visible" : ""}`}>
         <nav className="sidebar-content">
-          <a href="/about" onClick={handleToggle}>
+          <a href="#about" onClick={handleToggle}>
             About
           </a>
-          <a href="/projects" onClick={handleToggle}>
+          <a href="#projects" onClick={handleToggle}>
             Projects
           </a>
-          <a href="/experience" onClick={handleToggle}>
+          <a href="#experience" onClick={handleToggle}>
             Experience
           </a>
 

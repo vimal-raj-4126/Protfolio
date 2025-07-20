@@ -6,7 +6,7 @@ import pic from '../assets/persion.png';
 import sun from '../assets/sun.jpg';
 import moon from '../assets/moon.jpg';
 import { FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
-import NavSection from "../../FreelanceAndDeveloper/component/NavSection";
+import NavSection from "../../FresherAndStudent/component/NavSection";
 import { FaRegSnowflake } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
@@ -47,8 +47,9 @@ const Hero = () => {
 
   return (
     <div>
+       <NavSection />
       <div ref={rippleRef} className="hero-wrapper1">
-        <NavSection />
+       
         <div className="hero-container1">
 
           {/* Left Side: Text Content */}

@@ -5,7 +5,11 @@
     gap: 30px;
     margin: 5% 0px;
     padding: 20px 0px;
-    background-color: var(--third);
+    background:url('../../assets/bg.jpg');
+     background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .count-box {

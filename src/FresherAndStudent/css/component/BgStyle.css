@@ -1,0 +1,63 @@
+.snap-slide {
+  height: 50vh;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bg-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.text-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 64px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.letter {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.letter.animate {
+  animation: dropIn 0.6s forwards;
+}
+
+.letter.animate:nth-child(1) { animation-delay: 0s; }
+.letter.animate:nth-child(2) { animation-delay: 0.2s; }
+.letter.animate:nth-child(3) { animation-delay: 0.4s; }
+.letter.animate:nth-child(4) { animation-delay: 0.6s; }
+.letter.animate:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.border-bottom {
+  border-bottom: 3px solid white;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+ .text-container {
+font-size: 30px;
+}
+}
