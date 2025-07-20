@@ -1,11 +1,11 @@
 import cer from '../assets/cer.jpg'
-import cer1 from '../assets/cer1.jpg'
+// import cer1 from '../assets/cer1.jpg'
 
 
 const certificationPage = {
   sports: [
     { id: 1, image: cer, year: "2023" },
-    { id: 2, image: cer1, year: "2024" }
+    { id: 2, image: cer, year: "2024" }
   ],
   tech: [
     { id: 1, image: cer, year: "2025" },
