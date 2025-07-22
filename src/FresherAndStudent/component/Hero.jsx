@@ -18,14 +18,15 @@ const Hero = () => {
     const $el = $(rippleRef.current);
     if ($el.length > 0) {
       try {
+        // ✅ updated: remove old theme class and add new one
+        $el.removeClass("light-theme-bg dark-theme-bg");
+        $el.addClass(theme === "dark" ? "dark-theme-bg" : "light-theme-bg");
+
         $el.ripples({
-          resolution: 512,
+          resolution: 1024,
           dropRadius: 20,
           perturbance: 0.04,
         });
-
-        // Optional: background image
-        $el.css("background", `url(${theme === 'dark' ? moon : sun}) center/cover no-repeat`);
 
         for (let i = 0; i < 1; i++) {
           setTimeout(() => {
@@ -41,17 +42,17 @@ const Hero = () => {
         };
       } catch (e) {
         console.error('Ripples effect not supported.', e);
+        // ✅ fallback background if ripples not supported
+        $el.css("backgroundImage", `url(${theme === 'dark' ? moon : sun})`);
       }
     }
   }, [theme]);
 
   return (
     <div>
-       <NavSection />
+      <NavSection />
       <div ref={rippleRef} className="hero-wrapper1">
-       
         <div className="hero-container1">
-
           {/* Left Side: Text Content */}
           <div className="hero-center1">
             <span className="hero-background-name">
@@ -87,7 +88,7 @@ const Hero = () => {
               <div className="icon-box"><FaLinkedin className="left-icon" /></div>
               <div className="icon-box"><FaWhatsapp className="left-icon" /></div>
               <div className="icon-box"><FaInstagram className="left-icon" /></div>
-              <div className="icon-box"><FaGithub  className="left-icon" /></div>
+              <div className="icon-box"><FaGithub className="left-icon" /></div>
             </div>
           </div>
         </div>
