@@ -28,7 +28,7 @@ const NavSection = () => {
         <div className="logo">
           {/* <span>Portfolio</span> */}
           <img src="/image/logo.png" alt="" width={"28px"}/>
-          <span style={{position:"relative",left:"-7px",top:"3px"}}>iAML .</span>
+          <span style={{position:"relative",left:"-7px",top:"3px"}}>iMAL .</span>
         </div>
 
         <div className="nav-right ">
