@@ -1,14 +1,24 @@
 /* =========== WRAPPER ========== */
 .hero-wrapper1 {
   width: 100%;
-  min-height: 100vh;
-  padding: 20px 0;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
+}
+
+/* ✅ Theme-based background images */
+.light-theme-bg {
+  background-image: url('../../assets/sun.jpg');
+}
+
+.dark-theme-bg {
+  background-image: url('../../assets/moon.jpg');
 }
 
 /* =========== MAIN CONTAINER ========== */
@@ -21,6 +31,7 @@
   padding: 0 20px;
   gap: 40px;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 /* ========== RIGHT SIDE: Image + Icons ========== */
@@ -30,10 +41,12 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  flex: 1;
 }
 
 .hero-pic1 {
   width: 300px;
+  max-width: 100%;
   object-fit: contain;
   z-index: 1;
   mask-image: linear-gradient(to bottom, black 92%, transparent 100%);
@@ -52,12 +65,11 @@
 .icon-box {
   width: 60px;
   height: 60px;
-  /* background: var(--photo-color, #333); */
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid white;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .left-icon {
@@ -77,8 +89,6 @@
 }
 
 .hero-background-name {
-  /* position: absolute;
-  top: -60px; */
   font-size: clamp(120px, 7vw, 70px);
   font-weight: bold;
   color: var(--text-color, rgba(255, 255, 255, 0.1));
@@ -169,6 +179,7 @@
   cursor: pointer;
   z-index: 1;
 }
+
 .learn-more1 {
   font-weight: bold;
   font-size: 1rem;
@@ -223,6 +234,11 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  .hero-wrapper1 {
+    height: auto;
+    padding: 40px 0;
+  }
+
   .hero-container1 {
     flex-direction: column;
     align-items: center;
@@ -249,7 +265,8 @@
     font-size: 1rem;
   }
 
-  .learn-more {
+  .learn-more,
+  .learn-more1 {
     font-size: 0.9rem;
   }
 
