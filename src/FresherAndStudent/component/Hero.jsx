@@ -3,12 +3,10 @@ import React, { useEffect, useRef } from 'react';
 import $ from 'jquery';
 import 'jquery.ripples';
 import pic from '../assets/persion.png';
-import sun from '../assets/sun.jpg';
-import moon from '../assets/moon.jpg';
-import { FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+// import sun from '../assets/sun.jpg';
+// import moon from '../assets/moon.jpg';
+import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub, FaRegSnowflake } from 'react-icons/fa';
 import NavSection from "../../FresherAndStudent/component/NavSection";
-import { FaRegSnowflake } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   const rippleRef = useRef(null);
@@ -18,32 +16,24 @@ const Hero = () => {
     const $el = $(rippleRef.current);
     if ($el.length > 0) {
       try {
-        // ✅ updated: remove old theme class and add new one
-        $el.removeClass("light-theme-bg dark-theme-bg");
-        $el.addClass(theme === "dark" ? "dark-theme-bg" : "light-theme-bg");
-
         $el.ripples({
           resolution: 1024,
           dropRadius: 20,
           perturbance: 0.04,
         });
 
-        for (let i = 0; i < 1; i++) {
-          setTimeout(() => {
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            const strength = Math.random();
-            $el.ripples('drop', x, y, 30, strength);
-          }, i * 1000);
-        }
+        setTimeout(() => {
+          const x = Math.random() * window.innerWidth;
+          const y = Math.random() * window.innerHeight;
+          const strength = Math.random();
+          $el.ripples('drop', x, y, 30, strength);
+        }, 1000);
 
         return () => {
           if ($el.ripples) $el.ripples('destroy');
         };
       } catch (e) {
         console.error('Ripples effect not supported.', e);
-        // ✅ fallback background if ripples not supported
-        $el.css("backgroundImage", `url(${theme === 'dark' ? moon : sun})`);
       }
     }
   }, [theme]);
@@ -52,6 +42,9 @@ const Hero = () => {
     <div>
       <NavSection />
       <div ref={rippleRef} className="hero-wrapper1">
+        {/* ✅ Static background layer */}
+        <div className={`hero-bg-layer ${theme === 'dark' ? 'dark-theme-bg' : 'light-theme-bg'}`} />
+
         <div className="hero-container1">
           {/* Left Side: Text Content */}
           <div className="hero-center1">
