@@ -65,7 +65,7 @@ const Hero = () => {
             </h1>
 
             <p className="hero-mini1">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, dolore.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, dolores.
             </p>
 
             <div className="button-group">
