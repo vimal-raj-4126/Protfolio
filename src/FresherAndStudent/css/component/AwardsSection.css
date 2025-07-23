@@ -14,17 +14,18 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .award-item {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: none; /* No card background */
+  background: none;
   border-radius: 12px;
   padding: 10px 15px;
   transition: transform 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* border and box-shadow removed */
 }
 
 .award-item:hover {
@@ -32,8 +33,8 @@
 }
 
 .award-img-left {
-  width: 110px;
-  height: 110px;
+  width: 140px;  /* ✅ Increased size */
+  height: 140px;
   object-fit: contain;
   flex-shrink: 0;
   animation: floatUpDown 3s ease-in-out infinite;
@@ -66,22 +67,59 @@
   color: #666;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .award-item {
-    flex-direction: row;         /* ✅ keep row on mobile too */
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;            /* ✅ align text left */
+/* === Tablet === */
+@media (max-width: 768px) {
+  .awards-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .award-title {
+    font-size: 1.5rem;
+  }
+
+  .award-rank {
+    font-size: 1.1rem;
+  }
+
+  .award-year {
+    font-size: 0.95rem;
   }
 
   .award-img-left {
-    width: 100px;
-    height: 150px;
+    width: 120px;  /* ✅ Slightly smaller for tablets */
+    height: 120px;
   }
 
   .award-info {
-    width: 230px;
-    text-align: left;            /* ✅ keep text aligned left */
+    width: 100%;
+  }
+}
+
+/* === Mobile === */
+@media (max-width: 500px) {
+  .awards-section {
+    padding: 40px 10px;
+  }
+
+  .award-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .award-img-left {
+    width: 110px;  /* ✅ Larger than original mobile size */
+    height: 110px;
+  }
+
+  .award-title {
+    font-size: 1.3rem;
+  }
+
+  .award-info {
+    text-align: left;
+    width: 100%;
   }
 }
